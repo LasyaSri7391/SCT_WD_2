@@ -1,23 +1,52 @@
-# Stopwatch Web Application ⏱️
 
-A simple and interactive stopwatch web application built using HTML, CSS, and JavaScript.
+🚀 Stopwatch Web Application
+A modern, interactive stopwatch web application built using HTML, CSS, and JavaScript as part of the SkillCraft Technology Web Development Internship.
 
-## 🚀 Features
-- Start, Pause, and Reset stopwatch
-- Clean and responsive UI
-- Accurate time tracking
-- Lightweight and fast
+📌 Project Overview
+The Stopwatch Web Application is designed to accurately measure time intervals with start, pause, and reset functionality. It demonstrates DOM manipulation, event handling, and real-time UI updates using JavaScript.
 
-## 🛠️ Tech Stack
-- HTML
-- CSS
-- JavaScript
+🌐 Live Demo
+🔗 https://stopwatch-web-application-lasya.netlify.app/
 
+✨ Features
+Start, Pause, and Reset stopwatch  
+Accurate time tracking in hours, minutes, and seconds  
+Clean and minimal user interface  
+Responsive design for desktop, tablet, and mobile devices  
+Smooth and interactive user experience  
+Lightweight and fast performance  
 
-## 🎯 Purpose
-This project was built as part of a web development learning task to practice DOM manipulation and event handling.
+🛠️ Technologies Used
+HTML5  
+CSS3  
+JavaScript (ES6)  
 
----
+📁 Project Structure
+SCT_WD_2/
+│── index.html
+│── style.css
+│── script.js
+│── README.md  
 
-## 👩‍💻 Author
-Lasya Sri Naroju
+🎯 Internship Task
+SkillCraft Technology
+
+Task 2: Stopwatch Web Application
+
+📷 Preview
+Open index.html in your browser or use Live Server in Visual Studio Code.
+
+📸 Project Screenshots
+Stopwatch Interface  
+📸 Screenshot
+![image](images/stopwatch.png)
+
+Button Functionality  
+Start, Pause, Reset Buttons  
+
+👩‍💻 Developed By
+Lasya Sri Naroju  
+
+B.Tech Computer Science Engineering (AI & ML)  
+
+SkillCraft Technology Web Development Intern
