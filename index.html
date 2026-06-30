@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stopwatch | Web Application</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <main class="app">
+
+        <header class="app-header">
+            <h1>Stopwatch</h1>
+            <p>Measure every second with precision.</p>
+        </header>
+
+        <section class="stopwatch-card">
+
+            <div class="status">
+                <span class="status-dot" id="statusDot"></span>
+                <span id="statusText">Ready</span>
+            </div>
+
+            <div class="time-display">
+                <span id="hours">00</span>
+                <span>:</span>
+
+                <span id="minutes">00</span>
+                <span>:</span>
+
+                <span id="seconds">00</span>
+                <span>.</span>
+
+                <span id="milliseconds">000</span>
+            </div>
+
+            <div class="controls">
+                <button id="startBtn">Start</button>
+                <button id="lapBtn" disabled>Lap</button>
+                <button id="pauseBtn" disabled>Pause</button>
+                <button id="resetBtn" disabled>Reset</button>
+            </div>
+
+        </section>
+
+        <section class="laps">
+
+            <div class="lap-header">
+                <h2>Lap History</h2>
+                <span id="lapCount">0 Laps</span>
+            </div>
+
+            <ul id="lapList">
+                <li class="empty-state">
+                    No laps recorded yet.
+                </li>
+            </ul>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

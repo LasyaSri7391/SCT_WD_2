@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --bg: #0f172a;
+    --card: #1e293b;
+    --border: #334155;
+
+    --text: #f8fafc;
+    --text-light: #94a3b8;
+
+    --primary: #3b82f6;
+    --primary-hover: #2563eb;
+
+    --success: #22c55e;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+
+    --radius: 18px;
+    --shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+
+    --transition: 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    padding: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Poppins", sans-serif;
+    color: var(--text);
+
+    background: linear-gradient(135deg, #020617, var(--bg));
+}
+
+.app {
+    width: 100%;
+    max-width: 700px;
+}
+
+.app-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.app-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.app-header p {
+    margin-top: .5rem;
+    color: var(--text-light);
+}
+
+.stopwatch-card,
+.laps {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.stopwatch-card {
+    padding: 2.5rem;
+}
+
+.status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .6rem;
+    margin-bottom: 2rem;
+}
+
+.status-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--warning);
+    transition: background var(--transition);
+}
+
+.time-display {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: .15rem;
+
+    margin-bottom: 2.5rem;
+
+    font-size: 4rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+#milliseconds {
+    font-size: 2rem;
+    color: var(--primary);
+}
+
+.controls {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.controls button {
+    padding: .9rem;
+
+    border: none;
+    border-radius: 12px;
+
+    font: inherit;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all var(--transition);
+}
+
+.controls button:hover:not(:disabled) {
+    transform: translateY(-3px);
+}
+
+.controls button:active:not(:disabled) {
+    transform: scale(.97);
+}
+
+#startBtn {
+    background: var(--success);
+    color: white;
+}
+
+#startBtn:hover:not(:disabled) {
+    background: #16a34a;
+}
+
+#lapBtn {
+    background: var(--primary);
+    color: white;
+}
+
+#lapBtn:hover:not(:disabled) {
+    background: var(--primary-hover);
+}
+
+#pauseBtn {
+    background: var(--warning);
+    color: #111827;
+}
+
+#pauseBtn:hover:not(:disabled) {
+    background: #d97706;
+}
+
+#resetBtn {
+    background: var(--danger);
+    color: white;
+}
+
+#resetBtn:hover:not(:disabled) {
+    background: #dc2626;
+}
+
+button:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+.laps {
+    margin-top: 2rem;
+    padding: 1.5rem;
+}
+
+.lap-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.lap-header h2 {
+    font-size: 1.2rem;
+}
+
+#lapCount {
+    color: var(--text-light);
+    font-size: .95rem;
+}
+
+#lapList {
+    list-style: none;
+    max-height: 260px;
+    overflow-y: auto;
+}
+
+#lapList::-webkit-scrollbar {
+    width: 6px;
+}
+
+#lapList::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 20px;
+}
+
+#lapList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1rem 0;
+
+    border-bottom: 1px solid var(--border);
+
+    animation: fadeIn .25s ease;
+}
+
+#lapList li:last-child {
+    border-bottom: none;
+}
+
+#lapList li strong {
+    color: var(--primary);
+}
+
+.empty-state {
+    justify-content: center !important;
+    color: var(--text-light);
+    font-style: italic;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 1rem;
+    }
+
+    .stopwatch-card {
+        padding: 2rem;
+    }
+
+    .time-display {
+        font-size: 2.8rem;
+    }
+
+    #milliseconds {
+        font-size: 1.4rem;
+    }
+
+    .controls {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+
+    .time-display {
+        font-size: 2.2rem;
+    }
+
+    #milliseconds {
+        font-size: 1.1rem;
+    }
+
+    .lap-header {
+        flex-direction: column;
+        gap: .5rem;
+    }
+}
