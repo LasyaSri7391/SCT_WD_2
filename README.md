@@ -38,7 +38,7 @@ Open index.html in your browser or use Live Server in Visual Studio Code.
 
 📸 Project Screenshots
 
-[![Stopwatch Interface](images/stopwatch.png)](images/stopwatch.png)
+![Stopwatch UI](images/stopwatch-ui.png)
 
 Button Functionality  
 Start, Pause, Reset Buttons  
