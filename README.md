@@ -37,7 +37,7 @@ Task 2: Stopwatch Web Application
 Open index.html in your browser or use Live Server in Visual Studio Code.
 
 📸 Project Screenshots
-Stopwatch Interface  
+
 ![Stopwatch UI](images/stopwatch-ui.png)
 
 Button Functionality  
